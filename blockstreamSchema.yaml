@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Blockstream API
+  version: 1.0.0
+paths:
+  /blocks:
+    get:
+      summary: Get blocks from Blockstream API
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Number of blocks to retrieve (default is 15)
+        - in: query
+          name: start_height
+          schema:
+            type: integer
+          description: Height of the block to start from
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/block'
+
+  /blocks/tip/height:
+    get:
+      summary: Get height of the tip block from Blockstream API
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  height:
+                    type: integer
+                    description: Height of the tip block
+components:
+  schemas:
+    block:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the block
+        height:
+          type: integer
+          description: Height of the block
+        version:
+          type: integer
+          description: Version of the block
+        timestamp:
+          type: integer
+          description: Timestamp of the block (UNIX timestamp)
+        tx_count:
+          type: integer
+          description: Number of transactions in the block
+        size:
+          type: integer
+          description: Size of the block
+        weight:
+          type: integer
+          description: Weight of the block
+        merkle_root:
+          type: string
+          description: Merkle root of the block
+        previousblockhash:
+          type: string
+          description: Hash of the previous block
+        mediantime:
+          type: integer
+          description: Mediantime of the block
+        nonce:
+          type: integer
+          description: Nonce of the block
+        bits:
+          type: integer
+          description: Bits of the block
+        difficulty:
+          type: integer
+          description: Difficulty of the block
