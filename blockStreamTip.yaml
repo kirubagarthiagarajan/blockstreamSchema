@@ -11,15 +11,7 @@ paths:
           description: Successful response
           content:
             application/json:
+              name: height
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/block'
-components:
-  schemas:
-    block:
-      type: object
-      properties:
-        height:
-          type: integer
-          description: Height of the block     
+                type: integer
+                description: Height of the block   
