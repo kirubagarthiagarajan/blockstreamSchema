@@ -10,7 +10,16 @@ paths:
         '200':
           description: Successful response
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: "709425"
+                type: array
+                items:
+                  $ref: '#/components/schemas/block'
+components:
+  schemas:
+    block:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the block     
