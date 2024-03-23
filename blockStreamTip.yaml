@@ -6,7 +6,7 @@ paths:
   /blocks/tip/height:
     get:
       summary: Get height of the tip block from Blockstream API
-      description: Height of the block
+      description: Height of the tip block
       responses:
         '200':
           description: Successful response
@@ -15,12 +15,8 @@ paths:
               schema:
                 type: object
                 properties:
-                  data:
-                    type: object
-                    properties:
-                      blockstreamTip:
-                        type: object
-                        properties:
-                          height:
-                            type: integer
-                            description: Height of the tip block
+                  height:
+                    type: integer
+                    description: Height of the tip block
+        '404':
+          description: Not found
