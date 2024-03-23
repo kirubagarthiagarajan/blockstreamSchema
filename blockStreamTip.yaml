@@ -20,6 +20,6 @@ components:
     block:
       type: object
       properties:
-        id:
-          type: string
-          description: ID of the block     
+        height:
+          type: integer
+          description: Height of the block     
