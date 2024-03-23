@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: Blockstream API - Tip Height
+  version: 1.0.0
+paths:
+  /blocks/tip/height:
+    get:
+      summary: Get height of the tip block from Blockstream API
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  height:
+                    type: integer
+                    description: Height of the tip block

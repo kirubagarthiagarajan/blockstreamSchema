@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Blockstream API
+  title: Blockstream API - Blocks
   version: 1.0.0
 paths:
   /blocks:
@@ -27,17 +27,6 @@ paths:
                 items:
                   $ref: '#/components/schemas/block'
 
-  /blocks/tip/height:
-    get:
-      summary: Get height of the tip block from Blockstream API
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: integer
-                description: Height of the tip block
 components:
   schemas:
     block:
