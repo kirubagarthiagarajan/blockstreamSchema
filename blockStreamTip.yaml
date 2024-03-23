@@ -16,7 +16,6 @@ paths:
                 type: object
                 items:
                   $ref: '#/components/schemas/block'
-
 components:
   schemas:
     block:
