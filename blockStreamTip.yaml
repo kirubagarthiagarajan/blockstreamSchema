@@ -10,7 +10,7 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json:
+            text/plain:
               schema:
-                type: integer
-                example: 765432
+                type: string
+                example: "709425"
