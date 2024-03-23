@@ -11,7 +11,12 @@ paths:
           description: Successful response
           content:
             application/json:
-              name: height
               schema:
-                type: integer
-                description: Height of the block   
+                type: object
+                properties:
+                  blockstreamTip:
+                    type: object
+                    properties:
+                      height:
+                        type: integer
+                        description: Height of the block   
