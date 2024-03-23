@@ -12,8 +12,5 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  height:
-                    type: integer
-                    description: Height of the tip block
+                type: integer
+                description: Height of the tip block
