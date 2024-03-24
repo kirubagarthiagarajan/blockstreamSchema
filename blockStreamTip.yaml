@@ -13,14 +13,16 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                items:
-                  $ref: '#/components/schemas/block'
-components:
-  schemas:
-    block:
-      type: object
-      properties:
-        height:
-          type: integer
-          description: Height of the block
+                height:
+                  type: integer
+
+#                 items:
+#                   $ref: '#/components/schemas/block'
+# components:
+#   schemas:
+#     block:
+#       type: object
+#       properties:
+#         height:
+#           type: integer
+#           description: Height of the block
