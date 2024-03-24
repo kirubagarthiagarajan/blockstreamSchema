@@ -15,16 +15,15 @@ paths:
               schema:
                 type: object
                 properties:
-                  height:
-                    type: integer
-
-#                 items:
-#                   $ref: '#/components/schemas/block'
-# components:
-#   schemas:
-#     block:
-#       type: object
-#       properties:
-#         height:
-#           type: integer
-#           description: Height of the block
+                  data:
+                    type: object
+                    properties:
+                      item:
+                        $ref: '#/components/schemas/AssetItem'
+components:
+  schemas:
+    AssetItem:
+      type: object
+      properties:
+        height:
+          type: integer
