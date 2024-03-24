@@ -13,8 +13,10 @@ paths:
           content:
             application/json:
               schema:
-                height:
-                  type: integer
+              type: object
+                properties:
+                  height:
+                    type: integer
 
 #                 items:
 #                   $ref: '#/components/schemas/block'
