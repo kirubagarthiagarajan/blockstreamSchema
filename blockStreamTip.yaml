@@ -10,20 +10,3 @@ paths:
       responses:
         '200':
           description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      item:
-                        $ref: '#/components/schemas/AssetItem'
-components:
-  schemas:
-    AssetItem:
-      type: object
-      properties:
-        height:
-          type: integer
