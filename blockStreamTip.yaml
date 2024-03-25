@@ -8,5 +8,9 @@ paths:
       summary: Get height of the tip block from Blockstream API
       description: Height of the tip block
       responses:
-        '200':
-          description: Successful response
+          '200':
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  type: integer
